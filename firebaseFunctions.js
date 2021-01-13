@@ -46,7 +46,8 @@ const createHtml = (title, text) => {
   </head>
   <body>
     title: ${title}<br>
-    text: ${text}
+    text: ${text}<br>
+    <a href="/?title=てすと&text=ですよ">おためし</a>
   </body>
 </html>
 `;
