@@ -26,7 +26,7 @@ exports.nextjsFunc = https.onRequest((req, res) => {
 });
 
 exports.nextjsApi = https.onRequest((req, res) => {
-  return nextjsServer.prepare().then(() => nextjsHandle(req, res));
+  res.status(200).end("apiです");
 });
 
 const createHtml = (title, text) => {
