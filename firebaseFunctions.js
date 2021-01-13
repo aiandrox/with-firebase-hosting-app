@@ -23,6 +23,9 @@ exports.nextjsFunc = https.onRequest((req, res) => {
   } catch (error) {
     res.status(404).end("404 Not Found");
   }
+});
+
+exports.nextjsApi = https.onRequest((req, res) => {
   return nextjsServer.prepare().then(() => nextjsHandle(req, res));
 });
 
@@ -42,7 +45,8 @@ const createHtml = (title, text) => {
     <meta property="og:site_name" content="${title}">
   </head>
   <body>
-    あああ
+    title: ${title}<br>
+    text: ${text}
   </body>
 </html>
 `;
